@@ -7,7 +7,7 @@ public class DbConnect {
     private static final String USERNAME = "root";
     private static final String PASSWORD = "";
 
-    private Connection connection;
+    private Connection connection = null;
 
     public DbConnect() {
         try {
