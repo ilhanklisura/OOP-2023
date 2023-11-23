@@ -3,11 +3,11 @@ package week3.labs.database;
 import java.sql.*;
 
 public class DbConnect {
-    private static final String CONNECTION_STRING = "jdbc:mysql://localhost:3306/MY_DATABASE";
+    private static final String CONNECTION_STRING = "jdbc:mysql://localhost:3306/oop-lab3";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "";
 
-    private Connection connection = null;
+    private Connection connection;
 
     public DbConnect() {
         try {
