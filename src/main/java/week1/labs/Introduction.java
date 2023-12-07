@@ -4,51 +4,62 @@ import java.util.Scanner;
 
 public class Introduction {
     public static void main(String[] args) {
-        printName("Ilhan Klisura");
-        numOfSecondsInYear(2);
-        sumNumbers();
-        isNumberPositiveOrNegative();
-        checkNumbersEquality();
-    }
 
-    public static void printName(String name) {
-        System.out.println("The name passed is " + name);
-    }
+        // First Example:
 
-    public static void numOfSecondsInYear(int numOfYears) {
-        System.out.println("In ".concat(String.valueOf(numOfYears)).concat(" there are ").concat(String.valueOf(numOfYears * 365 * 24 * 60 * 60)));
-    }
+        System.out.println("Ilhan Klisura");
+        System.out.println("Hello World!");
+        System.out.println("(And all the people of the world!)");
 
-    public static void sumNumbers() {
+        // Second Example:
+
+        int seconds = 60;
+        int minutes = 60;
+        int hours = 24;
+        int days = 365;
+
+        int secondsYear = seconds * minutes * hours * days;
+
+        System.out.println("There are " + secondsYear + " seconds in year.");
+
+        // Third Example:
         Scanner reader = new Scanner(System.in);
-        System.out.println("Type the first integer: ");
-        int firstNumber = Integer.parseInt(reader.nextLine());
-        System.out.println("Type the second integer: ");
-        int secondNumber = Integer.parseInt(reader.nextLine());
-        System.out.println("The sum of numbers is ".concat(String.valueOf(firstNumber + secondNumber)));
-    }
 
-    public static void isNumberPositiveOrNegative() {
-        Scanner reader = new Scanner(System.in);
-        System.out.println("Type an integer: ");
-        int number = Integer.parseInt(reader.nextLine());
-        String message = number % 2 == 0 ? "The number " + number + " is positive" : "The number " + number + " is negative";
-        System.out.println(message);
-    }
+        System.out.println("Type a number: ");
+        int prviBroj = Integer.parseInt(reader.nextLine());
 
-    public static void checkNumbersEquality() {
-        Scanner reader = new Scanner(System.in);
-        System.out.println("Type the first integer: ");
-        int firstNumber = Integer.parseInt(reader.nextLine());
-        System.out.println("Type the second integer: ");
-        int secondNumber = Integer.parseInt(reader.nextLine());
+        System.out.println("Type a second number: ");
+        int drugiBroj = Integer.parseInt(reader.nextLine());
 
-        if (firstNumber == secondNumber) {
-            System.out.println("Equal numbers");
-        } else if (firstNumber > secondNumber) {
-            System.out.println("First number is greater");
+        int suma = prviBroj + drugiBroj;
+
+        System.out.println("The sum of two numbers is " + suma);
+
+        // Fourth Question:
+        System.out.println("Enter number: ");
+        int broj = Integer.parseInt(reader.nextLine());
+
+        if (broj > 0) {
+            System.out.println("Number is positive.");
+        } else if (broj == 0) {
+            System.out.println("Number is zero.");
         } else {
-            System.out.println("Second number is greater");
+            System.out.println("Number is negative.");
+        }
+
+        // Fifth Question:
+        System.out.println("Enter first number: ");
+        int firstNumber = Integer.parseInt(reader.nextLine());
+
+        System.out.println("Enter second number: ");
+        int secondNumber = Integer.parseInt(reader.nextLine());
+
+        if (firstNumber > secondNumber){
+            System.out.println("The first number is greater than second number.");
+        } else if (firstNumber == secondNumber) {
+            System.out.println("The numbers are equal.");
+        } else {
+            System.out.println("The second number is greater than first number.");
         }
     }
 }
