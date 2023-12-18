@@ -1,13 +1,15 @@
-package week3vjezba.labs;
+package week3.lectures.ds;
 
-import java.util.ArrayList;
+import week3.lectures.enums.Gender;
+import week3.lectures.model.User;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class DataStructures {
-    private List<User> users = new ArrayList<>();
+    private List<User> users;
 
     public DataStructures() {
         users = Arrays.asList(
@@ -16,9 +18,11 @@ public class DataStructures {
                 new User("Harun", Gender.MALE, 21)
         );
     }
+
     public List<User> getAll() {
         return this.users;
     }
+
     public Optional<User> getByName(String name) {
         return users
                 .stream()
@@ -26,34 +30,14 @@ public class DataStructures {
                     return user.getName().equals(name);
                 }).findFirst();
     }
+
     public List<User> findAgeGreaterThan(int age) {
         return users
                 .stream()
                 .filter(user -> age >= user.getAge())
                 .toList();
     }
-    public List<Integer> multiplyAge() {
-        return users
-                .stream()
-                .map(user -> user.getAge() * 2)
-                .collect(Collectors.toList());
-    }
-    public void multiplyAgeAndPrint() {
-        users
-                .stream()
-                .map(user -> user.getAge() * 2)
-                .forEach(y -> {
-                    System.out.println(y);
-                });
-    }
-    public List<User> multiplyAgeReturnUserAndPrint() {
-        return users
-                .stream()
-                .peek(y -> {
-                    y.setAge(y.getAge() * 2);
-                })
-                .collect(Collectors.toList());
-    }
+
     public void getByGender(Gender gender) {
         users = users.stream()
                 .filter(user -> user.getGender().equals(gender))

@@ -1,4 +1,6 @@
-package week3vjezba.labs;
+package week3.lectures.model;
+
+import week3.lectures.enums.Gender;
 
 public class User {
         private String name;

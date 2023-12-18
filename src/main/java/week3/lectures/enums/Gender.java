@@ -1,4 +1,4 @@
-package week3vjezba.labs;
+package week3.lectures.enums;
 
 public enum Gender {
     MALE, FEMALE

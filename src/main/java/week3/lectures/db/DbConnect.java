@@ -1,11 +1,11 @@
-package week3vjezba.labs;
+package week3.lectures.db;
 
 import java.sql.*;
 
 public class DbConnect {
-    private static final String CONNECTION_STRING = "jdbc:mysql://localhost:3306/week3vjezba";
+    private static final String CONNECTION_STRING = "jdbc:mysql://localhost:3306/JavaConnection";
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "12345678";
+    private static final String PASSWORD = "";
 
     private Connection connection = null;
 
@@ -17,9 +17,7 @@ public class DbConnect {
         }
     }
     public void getAllCustomers() throws SQLException {
-        PreparedStatement statement = this
-                .connection
-                .prepareStatement("SELECT * FROM customers;");
+        PreparedStatement statement = this.connection.prepareStatement("SELECT * FROM customers LIMIT 5");
         ResultSet rs = statement.executeQuery();
 
         while (rs.next()) {
@@ -28,9 +26,7 @@ public class DbConnect {
         }
     }
     public void getCustomerById(int customerId) throws SQLException {
-        PreparedStatement statement = this
-                .connection
-                .prepareStatement("SELECT * FROM customers WHERE customerNumber = ?;");
+        PreparedStatement statement = this.connection.prepareStatement("SELECT * FROM customers WHERE customerNumber = ?");
         statement.setInt(1, customerId);
         ResultSet rs = statement.executeQuery();
 
