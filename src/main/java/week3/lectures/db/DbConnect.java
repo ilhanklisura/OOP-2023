@@ -21,8 +21,12 @@ public class DbConnect {
         ResultSet rs = statement.executeQuery();
 
         while (rs.next()) {
-            System.out.println(rs.getString("customerNumber"));
-            System.out.println(rs.getString("customerName"));
+            System.out.print(rs.getString("customerName"));
+            System.out.print(",");
+            System.out.print(rs.getString("gender"));
+            System.out.print(",");
+            System.out.print(rs.getString("age"));
+            System.out.print(" ");
         }
     }
     public void getCustomerById(int customerId) throws SQLException {
