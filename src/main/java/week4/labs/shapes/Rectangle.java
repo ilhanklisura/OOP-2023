@@ -6,7 +6,6 @@ public class Rectangle extends Shape {
     private double width;
     private double height;
 
-    // Constructor
     public Rectangle(String color, FillType filled, double width, double height) {
         super(color, filled);
         this.width = width;

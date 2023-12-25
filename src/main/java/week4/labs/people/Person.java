@@ -9,8 +9,29 @@ public class Person {
         this.address = address;
     }
 
+    public void printInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Address: " + address);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     @Override
     public String toString() {
-        return name + "\n\t" + address;
+        return "Name: " + name + "\nAddress: " + address;
     }
 }
