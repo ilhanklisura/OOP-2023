@@ -1,15 +1,11 @@
 package week4.labs.people;
 
 public class Teacher extends Person {
-    private double salary;
+    private int salary;
 
-    public Teacher(String name, String address, double salary) {
+    public Teacher(String name, String address, int salary) {
         super(name, address);
         this.salary = salary;
-    }
-
-    public double getSalary() {
-        return salary;
     }
 
     @Override
@@ -17,4 +13,5 @@ public class Teacher extends Person {
         return super.toString() + "\nSalary: " + salary;
     }
 }
+
 

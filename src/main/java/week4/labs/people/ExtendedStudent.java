@@ -4,21 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExtendedStudent extends ExtendedPerson {
-    private String student_id;
+    private String studentId;
     private List<Double> grades;
 
-    public ExtendedStudent(String name, String address, int age, String country, String student_id) {
+    public ExtendedStudent(String name, String address, int age, String country, String studentId) {
         super(name, address, age, country);
-        this.student_id = student_id;
+        this.studentId = studentId;
         this.grades = new ArrayList<>();
     }
 
     public String getStudentId() {
-        return student_id;
+        return studentId;
     }
 
-    public void setStudentId(String student_id) {
-        this.student_id = student_id;
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
 
     public List<Double> getGrades() {
@@ -33,4 +33,5 @@ public class ExtendedStudent extends ExtendedPerson {
         }
     }
 }
+
 
