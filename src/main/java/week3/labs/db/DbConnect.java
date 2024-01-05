@@ -1,6 +1,5 @@
 package week3.labs.db;
 
-
 import week3.labs.enums.TaskStatus;
 import week3.labs.model.TaskItem;
 
@@ -8,7 +7,6 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-// DbConnect class for connecting to a database
 public class DbConnect {
     private static final String CONNECTION_STRING = "jdbc:mysql://localhost:3306/TaskManagementSystem";
     private static final String USERNAME = "root"; // Change as needed
