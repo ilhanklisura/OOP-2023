@@ -17,12 +17,10 @@ public class DataStructures {
                 new TaskItem(3, "Go over tasks from lab2", TaskStatus.COMPLETED));
     }
 
-    // Method to get all tasks
     public List<TaskItem> getAllTasks() {
         return tasks;
     }
 
-    // Method to filter tasks by status
     public List<TaskItem> getByStatus(TaskStatus taskStatus) {
         List<TaskItem> filteredTasks = new ArrayList<>();
         for (TaskItem task : tasks) {
@@ -33,7 +31,6 @@ public class DataStructures {
         return filteredTasks;
     }
 
-    // Method to find tasks whose id is greater than or equal to a specified value
     public List<TaskItem> findTasksById(int taskId) {
         List<TaskItem> foundTasks = new ArrayList<>();
         for (TaskItem task : tasks) {
@@ -44,7 +41,6 @@ public class DataStructures {
         return foundTasks;
     }
 
-    // Method to print task descriptions using forEach stream
     public void printTaskDescriptions() {
         tasks.forEach(task ->
                 System.out.println(task.getTaskDescription()));
