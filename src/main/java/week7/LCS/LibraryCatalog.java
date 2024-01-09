@@ -1,4 +1,4 @@
-package week7.librarycatalogsystem;
+package week7.LCS;
 
 import java.util.List;
 import java.util.Optional;

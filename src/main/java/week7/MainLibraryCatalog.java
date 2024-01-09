@@ -1,7 +1,7 @@
 package week7;
 
-import week7.librarycatalogsystem.Book;
-import week7.librarycatalogsystem.LibraryCatalog;
+import week7.LCS.Book;
+import week7.LCS.LibraryCatalog;
 
 import java.util.Arrays;
 
