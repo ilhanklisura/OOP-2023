@@ -1,4 +1,4 @@
-package week7.loggingsystem;
+package week7.LS;
 
 public class ClassLogger implements Logger {
     private String loggerName;

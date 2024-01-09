@@ -1,8 +1,8 @@
 package week7;
 
-import week7.loggingsystem.ClassLogger;
-import week7.loggingsystem.Logger;
-import week7.loggingsystem.RecordLogger;
+import week7.LS.ClassLogger;
+import week7.LS.Logger;
+import week7.LS.RecordLogger;
 
 import java.util.function.Consumer;
 
